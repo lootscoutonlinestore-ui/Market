@@ -1,0 +1,82 @@
+{
+  "_notes": "estimated_value_eur is a rough CIB/complete resale ballpark for flagging deals. Always double-check on PriceCharting before buying. alert_below_ratio = flag if listing price is under this fraction of estimated_value.",
+  "alert_below_ratio": 0.55,
+
+  "watchlist": [
+    { "title": "Silent Hill 2", "console": "PS2", "estimated_value_eur": 140 },
+    { "title": "Silent Hill 3", "console": "PS2", "estimated_value_eur": 90 },
+    { "title": "Kuon", "console": "PS2", "estimated_value_eur": 350 },
+    { "title": "Rule of Rose", "console": "PS2", "estimated_value_eur": 700 },
+    { "title": "Haunting Ground", "console": "PS2", "estimated_value_eur": 150 },
+    { "title": "Fatal Frame", "console": "PS2", "estimated_value_eur": 120 },
+    { "title": "Fatal Frame 2", "console": "PS2", "estimated_value_eur": 150 },
+    { "title": ".hack Quarantine", "console": "PS2", "estimated_value_eur": 90 },
+    { "title": "Gran Turismo 4", "console": "PS2", "estimated_value_eur": 100 },
+    { "title": "Shadow Hearts Covenant", "console": "PS2", "estimated_value_eur": 90 },
+    { "title": "Okami", "console": "PS2", "estimated_value_eur": 80 },
+
+    { "title": "Suikoden II", "console": "PS1", "estimated_value_eur": 250 },
+    { "title": "Valkyrie Profile", "console": "PS1", "estimated_value_eur": 130 },
+    { "title": "Lunar 2 Eternal Blue Complete", "console": "PS1", "estimated_value_eur": 150 },
+    { "title": "Tron Bonne", "console": "PS1", "estimated_value_eur": 200 },
+    { "title": "Symphony of the Night", "console": "PS1", "estimated_value_eur": 100 },
+    { "title": "Silent Hill", "console": "PS1", "estimated_value_eur": 90 },
+    { "title": "Team Buddies", "console": "PS1", "estimated_value_eur": 60 },
+    { "title": "Persona 2", "console": "PS1", "estimated_value_eur": 180 },
+
+    { "title": "Rocksmith Guitar Bundle", "console": "PS3", "estimated_value_eur": 200 },
+    { "title": "Ni no Kuni Wrath of the White Witch", "console": "PS3", "estimated_value_eur": 70 },
+    { "title": "Armored Core Verdict Day", "console": "PS3", "estimated_value_eur": 80 },
+    { "title": "Legend of Spyro Dawn of the Dragon", "console": "PS3", "estimated_value_eur": 75 },
+
+    { "title": "Conker's Bad Fur Day", "console": "N64", "estimated_value_eur": 120 },
+    { "title": "GoldenEye 007", "console": "N64", "estimated_value_eur": 40 },
+    { "title": "Worms Armageddon", "console": "N64", "estimated_value_eur": 90 },
+    { "title": "Kirby 64", "console": "N64", "estimated_value_eur": 70 },
+    { "title": "Snowboard Kids 2", "console": "N64", "estimated_value_eur": 60 },
+
+    { "title": "Fire Emblem Path of Radiance", "console": "GameCube", "estimated_value_eur": 180 },
+    { "title": "Pokemon Box Ruby and Sapphire", "console": "GameCube", "estimated_value_eur": 900 },
+    { "title": "Baten Kaitos", "console": "GameCube", "estimated_value_eur": 100 },
+    { "title": "Ikaruga", "console": "GameCube", "estimated_value_eur": 90 },
+    { "title": "Skies of Arcadia Legends", "console": "GameCube", "estimated_value_eur": 100 },
+
+    { "title": "MUSHA", "console": "Genesis", "estimated_value_eur": 350 },
+    { "title": "Beggar Prince", "console": "Genesis", "estimated_value_eur": 150 },
+
+    { "title": "Cannon Spike", "console": "Dreamcast", "estimated_value_eur": 200 },
+    { "title": "Marvel vs Capcom 2", "console": "Dreamcast", "estimated_value_eur": 90 },
+    { "title": "Skies of Arcadia", "console": "Dreamcast", "estimated_value_eur": 60 },
+    { "title": "Ikaruga Dreamcast", "console": "Dreamcast", "estimated_value_eur": 150 },
+
+    { "title": "Stadium Events", "console": "NES", "estimated_value_eur": 3000 },
+    { "title": "Little Samson", "console": "NES", "estimated_value_eur": 1000 },
+
+    { "title": "Silent Hill Origins", "console": "PSP", "estimated_value_eur": 60 }
+  ],
+
+  "broad_sweep_keywords": [
+    "lote juegos ps2",
+    "lote juegos ps1",
+    "lote juegos ps3",
+    "lote juegos gamecube",
+    "lote juegos n64",
+    "lote juegos nintendo 64",
+    "lote juegos dreamcast",
+    "lote juegos saturn",
+    "lote juegos game boy",
+    "lote juegos nintendo",
+    "juego ps2 completo",
+    "juego ps1 completo caja",
+    "coleccion videojuegos retro",
+    "funko pop lote",
+    "funko pop retro games",
+    "retro games bundle",
+    "ps2 game lot complete",
+    "gamecube lot complete",
+    "n64 lot complete box"
+  ],
+
+  "min_price_eur": 1,
+  "max_price_eur": 400
+}
