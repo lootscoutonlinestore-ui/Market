@@ -64,6 +64,26 @@ def send_telegram(token, chat_id, text):
         print("Telegram send failed:", resp.status_code, resp.text)
 
 
+_vinted_session = None
+
+
+def get_vinted_session():
+    """Vinted's API rejects cold requests with 401. Visiting the site
+    first, like a real browser would, gets us a valid session cookie
+    we can reuse for the actual search calls."""
+    global _vinted_session
+    if _vinted_session is not None:
+        return _vinted_session
+    s = requests.Session()
+    s.headers.update(HEADERS_VINTED)
+    try:
+        s.get("https://www.vinted.es/", timeout=15)
+    except Exception as e:
+        print("Vinted warm-up request failed:", e)
+    _vinted_session = s
+    return s
+
+
 def search_vinted(query, min_price=None, max_price=None):
     params = {
         "search_text": query,
@@ -75,8 +95,14 @@ def search_vinted(query, min_price=None, max_price=None):
     if max_price:
         params["price_to"] = max_price
     try:
-        resp = requests.get(VINTED_SEARCH_URL, params=params,
-                             headers=HEADERS_VINTED, timeout=15)
+        session = get_vinted_session()
+        resp = session.get(VINTED_SEARCH_URL, params=params, timeout=15)
+        if resp.status_code == 401:
+            # Session cookie may have expired mid-run -- refresh once and retry.
+            global _vinted_session
+            _vinted_session = None
+            session = get_vinted_session()
+            resp = session.get(VINTED_SEARCH_URL, params=params, timeout=15)
         if not resp.ok:
             print(f"Vinted search failed for '{query}':", resp.status_code)
             return []
@@ -97,6 +123,23 @@ def search_vinted(query, min_price=None, max_price=None):
         return []
 
 
+_wallapop_session = None
+
+
+def get_wallapop_session():
+    global _wallapop_session
+    if _wallapop_session is not None:
+        return _wallapop_session
+    s = requests.Session()
+    s.headers.update(HEADERS_WALLAPOP)
+    try:
+        s.get("https://es.wallapop.com/", timeout=15)
+    except Exception as e:
+        print("Wallapop warm-up request failed:", e)
+    _wallapop_session = s
+    return s
+
+
 def search_wallapop(query, min_price=None, max_price=None):
     params = {
         "keywords": query,
@@ -110,8 +153,8 @@ def search_wallapop(query, min_price=None, max_price=None):
     if max_price:
         params["max_sale_price"] = max_price
     try:
-        resp = requests.get(WALLAPOP_SEARCH_URL, params=params,
-                             headers=HEADERS_WALLAPOP, timeout=15)
+        session = get_wallapop_session()
+        resp = session.get(WALLAPOP_SEARCH_URL, params=params, timeout=15)
         if not resp.ok:
             print(f"Wallapop search failed for '{query}':", resp.status_code)
             return []
